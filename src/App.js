@@ -1,15 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
-import Home from './Home';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-function App() {
+import Header from './components/header/header.js';
+import Footer from './components/footer/Footer.jsx';
+import ScrollToTop from './components/scroll/Scroll.jsx';
+import Productcard from './components/productdetails/Productcard.jsx'
+import Productpage from './components/productdetails/Productpage.jsx'
+const App = () => {
   return (
-    <Router>
-      <Home />
+    <Router basename={process.env.PUBLIC_URL}>
+      <div>
+        <ScrollToTop /> {/* Ensures the page scrolls to top on route change */}
+        <Header />
+        
+        <Routes>
+          <Route path="/" element={<Productcard />} />
+          <Route path="/product/:productId" element={<Productpage />} />
+        </Routes>
+
+        
+        <Footer />
+      </div>
     </Router>
-    );
-}
+  );
+};
 
 export default App;
