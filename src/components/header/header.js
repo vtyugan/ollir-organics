@@ -63,6 +63,7 @@ const DrawerAppBar: React.FC<Props> = (props: Props) => {
         <Toolbar sx={{ justifyContent: 'space-between' }}>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <img src={ollirLogo} alt="Logo" style={{ height: 40 }} /> {/* Use the imported image */}
+            
           </Box>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
