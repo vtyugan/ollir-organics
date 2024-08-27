@@ -7,7 +7,7 @@ import LipButter from '../components/img/lip-butter.jpg';
 import FaceCream from '../components/img/Face-cream.jpg';
 import FootButter from '../components/img/Foot-cream.jpg';
 import Kajal from '../components/img/Kajal.jpg';
-import LipBalm from '../components/img/lip-butter.jpg';
+import LipBalm from '../components/img/lip-balm.jpg';
 
 
 export const products = {

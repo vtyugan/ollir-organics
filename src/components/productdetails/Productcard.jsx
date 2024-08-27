@@ -7,7 +7,7 @@ import Nattusakkarai from '../nattusakkarai/Nattusakkarai';
 import Features from '../features/Feature';
 
 // Import images
-import HairOilImage from '../img/Hair-oil.jpg';
+import HairOilImage from '../img/Hair-oil-2.jpg';
 import BodyLotionImage from '../img/body-lotion.jpg';
 import FootSoakImage from '../img/Foot-soak.jpg';
 import BathPowderImage from '../img/Bath-powder.jpg';
@@ -16,7 +16,7 @@ import LipButterImage from '../img/lip-butter.jpg';
 import FaceCreamImage from '../img/Face-cream.jpg';
 import FootButterImage from '../img/Foot-cream.jpg';
 import KajalImage from '../img/Kajal.jpg';
-import LipBalmImage from '../img/lip-butter.jpg';
+import LipBalmImage from '../img/lip-balm.jpg';
 
 const products = [
     { 
