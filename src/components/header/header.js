@@ -19,7 +19,7 @@ interface Props {
 
 const drawerWidth = 240;
 const navItems = [
-  { text: 'Home', href: '#Handmade' },
+  { text: 'Home', href: '/#Handmade' },
 ];
 
 const DrawerAppBar: React.FC<Props> = (props: Props) => {

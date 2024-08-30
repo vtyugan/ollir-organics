@@ -118,7 +118,7 @@ const ProductCard = () => {
     : products.filter((product) => product.type === selectedCategory);
 
   return (
-    <div className="product-container">
+    <div className="product-container" id='Productcard'>
       <Handmade />
       <h2 className='h2'>Our Products</h2>
       <div className="product-filters" id="product-filters">
