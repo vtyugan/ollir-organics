@@ -1,3 +1,4 @@
+/* General Styles */
 .product-grid {
     display: flex;
     flex-wrap: wrap;
@@ -23,13 +24,20 @@
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Hover-Zoom Effect for Product Images */
 .product-image {
     width: 100%;
     height: auto;
     border-bottom: 1px solid #ddd;
     margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out; /* Smooth zoom transition */
 }
 
+.product-card:hover .product-image {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Product Details */
 .product-name {
     font-size: 1.2em;
     margin: 10px 0;
@@ -55,6 +63,7 @@
     background: #FFB524;
 }
 
+/* Product Filters */
 .product-filters {
     display: flex;
     justify-content: end;
@@ -76,22 +85,9 @@
     background-color: #FFB524;
 }
 
-.h2 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #FFB524;
-    margin-top: 10%;
-    padding-left: 5%;
-}
-.product-detail span.read-more {
-    color: #888;
-    cursor: pointer; /* Add a pointer cursor to indicate it's clickable */
-  }
-  
-  .product-detail span.read-more:hover {
-    color: #FFB524;
-  }
-
 /* Responsive Styles */
+
+/* Mobile view adjustments */
 @media (max-width: 768px) {
     .product-card {
         width: 100%;
@@ -116,6 +112,7 @@
     }
 }
 
+/* Tablet view adjustments */
 @media (min-width: 769px) and (max-width: 1024px) {
     .product-card {
         width: calc(50% - 40px); /* Adjust for two cards per row */
@@ -131,8 +128,19 @@
     }
 }
 
+/* Desktop view adjustments */
 @media (min-width: 1025px) {
     .product-card {
         width: calc(33.33% - 40px); /* Adjust for three cards per row */
     }
+}
+
+/* Add hover effect for the "read more" span */
+.product-detail span.read-more {
+    color: #888;
+    cursor: pointer;
+}
+
+.product-detail span.read-more:hover {
+    color: #FFB524;
 }
