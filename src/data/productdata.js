@@ -376,8 +376,8 @@ export const products = {
       price: '99.00',
       priceSize : ' (5 g)',
       rating: 4,
-      description1: '<strong>Flavours <strong>: Beetroot, Vanilla, Strawberry, Rose, Noral',
-      description2: '<strong>Ingredients <strong>: Beeswax, Virgin Coconut oil, Avacado oil, Amond oil, Cocobutter, Shea butter, Vitamin E oil, Alkanet Root.',
+      description1: '<strong>Flavours </strong>: Beetroot, Vanilla, Strawberry, Rose, Noral',
+      description2: '<strong>Ingredients </strong>: Beeswax, Virgin Coconut oil, Avacado oil, Amond oil, Cocobutter, Shea butter, Vitamin E oil, Alkanet Root.',
       longDescription: '<strong>Directions </strong>: Apply with your finger tips for smooth and moisitured lips. Use it regularly and as often as desired.',
       details: [
         { title: 'Weight', value: '100 ml' },
