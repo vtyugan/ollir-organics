@@ -30,11 +30,12 @@
     height: auto;
     border-bottom: 1px solid #ddd;
     margin-bottom: 15px;
-    transition: transform 0.3s ease-in-out; /* Smooth zoom transition */
+    transition: transform 0.3s ease-in-out, border 0.3s ease-in-out; /* Smooth transition for the border */
 }
 
 .product-card:hover .product-image {
     transform: scale(1.1); /* Zoom effect on hover */
+    border-bottom: none; /* Remove border during hover */
 }
 
 /* Product Details */
@@ -144,3 +145,15 @@
 .product-detail span.read-more:hover {
     color: #FFB524;
 }
+
+.h2 {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    color: #FFB524;
+    margin: 40px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
