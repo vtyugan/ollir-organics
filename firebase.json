@@ -1,13 +1,10 @@
 {
   "hosting": {
     "public": "build",
-    "cleanUrls": true,
-    "redirects": [
-      {
-        "source": "/**",
-        "destination": "https://ollirorganics.com/**",
-        "type": 301
-      }
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
     ]
   }
 }
