@@ -1,0 +1,89 @@
+[debug] [2024-11-11T06:44:35.726Z] ----------------------------------------------------------------------
+[debug] [2024-11-11T06:44:35.729Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\vasan\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2024-11-11T06:44:35.729Z] CLI Version:   13.24.2
+[debug] [2024-11-11T06:44:35.729Z] Platform:      win32
+[debug] [2024-11-11T06:44:35.729Z] Node Version:  v21.6.1
+[debug] [2024-11-11T06:44:35.730Z] Time:          Mon Nov 11 2024 12:14:35 GMT+0530 (India Standard Time)
+[debug] [2024-11-11T06:44:35.730Z] ----------------------------------------------------------------------
+[debug] 
+[info] Already logged in as vasanthvc02@gmail.com
+[debug] [2024-11-11T06:44:45.951Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\vasan\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:268:49)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-11-11T06:44:53.883Z] ----------------------------------------------------------------------
+[debug] [2024-11-11T06:44:53.887Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\vasan\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-11-11T06:44:53.888Z] CLI Version:   13.24.2
+[debug] [2024-11-11T06:44:53.888Z] Platform:      win32
+[debug] [2024-11-11T06:44:53.888Z] Node Version:  v21.6.1
+[debug] [2024-11-11T06:44:53.888Z] Time:          Mon Nov 11 2024 12:14:53 GMT+0530 (India Standard Time)
+[debug] [2024-11-11T06:44:53.889Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-11T06:44:53.964Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-11T06:44:53.965Z] > authorizing via signed-in user (vasanthvc02@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\my-app
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-11-11T06:45:12.885Z] Using project from CLI flag: ollir-organics
+[debug] [2024-11-11T06:45:12.888Z] Checked if tokens are valid: true, expires at: 1731310082949
+[debug] [2024-11-11T06:45:12.890Z] Checked if tokens are valid: true, expires at: 1731310082949
+[debug] [2024-11-11T06:45:12.892Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ollir-organics [none]
+[debug] [2024-11-11T06:45:34.269Z] ----------------------------------------------------------------------
+[debug] [2024-11-11T06:45:34.274Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\vasan\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting:ollir-organics
+[debug] [2024-11-11T06:45:34.274Z] CLI Version:   13.24.2
+[debug] [2024-11-11T06:45:34.275Z] Platform:      win32
+[debug] [2024-11-11T06:45:34.275Z] Node Version:  v21.6.1
+[debug] [2024-11-11T06:45:34.275Z] Time:          Mon Nov 11 2024 12:15:34 GMT+0530 (India Standard Time)
+[debug] [2024-11-11T06:45:34.276Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-11T06:45:34.355Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-11T06:45:34.356Z] > authorizing via signed-in user (vasanthvc02@gmail.com)
+[debug] [2024-11-11T06:45:34.356Z] [iam] checking project ollir-organics for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-11-11T06:45:34.357Z] Checked if tokens are valid: true, expires at: 1731310082949
+[debug] [2024-11-11T06:45:34.357Z] Checked if tokens are valid: true, expires at: 1731310082949
+[debug] [2024-11-11T06:45:34.358Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ollir-organics:testIamPermissions [none]
+[debug] [2024-11-11T06:45:34.358Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ollir-organics:testIamPermissions x-goog-quota-user=projects/ollir-organics
+[debug] [2024-11-11T06:45:34.359Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ollir-organics:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-11-11T06:46:16.188Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ollir-organics:testIamPermissions 200
+[debug] [2024-11-11T06:46:16.188Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ollir-organics:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-11-11T06:46:16.189Z] Checked if tokens are valid: true, expires at: 1731310082949
+[debug] [2024-11-11T06:46:16.189Z] Checked if tokens are valid: true, expires at: 1731310082949
+[debug] [2024-11-11T06:46:16.189Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ollir-organics [none]
+[debug] [2024-11-11T06:46:28.828Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ollir-organics 200
+[debug] [2024-11-11T06:46:28.828Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ollir-organics {"projectId":"ollir-organics","projectNumber":"922171086163","displayName":"ollir-organics","name":"projects/ollir-organics","resources":{"hostingSite":"ollir-organics"},"state":"ACTIVE","etag":"1_504dd21b-483a-4428-8979-31c200992403"}
+[info] 
+[info] === Deploying to 'ollir-organics'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-11-11T06:46:28.836Z] Checked if tokens are valid: true, expires at: 1731310082949
+[debug] [2024-11-11T06:46:28.836Z] Checked if tokens are valid: true, expires at: 1731310082949
+[debug] [2024-11-11T06:46:28.836Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ollir-organics/versions [none]
+[debug] [2024-11-11T06:46:28.836Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ollir-organics/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-11-11T06:46:54.797Z] *** [apiv2] error from fetch(https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ollir-organics/versions, {"headers":{},"method":"POST","body":"{\"status\":\"CREATED\",\"labels\":{\"deployment-tool\":\"cli-firebase\"}}"}): FetchError: request to https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ollir-organics/versions failed, reason: Client network socket disconnected before secure TLS connection was established
+[debug] [2024-11-11T06:46:59.811Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\vasan\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:268:49)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+[error] 
+[error] Error: An unexpected error has occurred.

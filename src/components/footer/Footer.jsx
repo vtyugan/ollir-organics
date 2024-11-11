@@ -64,6 +64,11 @@ function Footer() {
                     </div>
                 </div>
             </div>
+
+            {/* Copyright Notice */}
+            <div className="container text-center py-4">
+                <p className="mb-0">© {new Date().getFullYear()} Ollir Organics. All Rights Reserved.</p>
+            </div>
         </div>
     );
 }

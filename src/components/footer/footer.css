@@ -59,3 +59,9 @@
 .footer p{
     color: rgba(255, 255, 255, .5);;
 }
+
+/* footer.css */
+footer .container p {
+    font-size: 14px;
+    color: #ccc;  /* Light grey color for the text */
+}
