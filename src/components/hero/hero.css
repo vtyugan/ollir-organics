@@ -1,7 +1,11 @@
 /* Hero Header Styles */
 .hero-header {
-    background: linear-gradient(rgba(248, 223, 173, 0.1), rgba(248, 223, 173, 0.1)), url();
-    background-repeat: no-repeat;
+    background: rgb(253,252,251);
+background: -moz-linear-gradient(90deg, rgba(253,252,251,1) 30%, rgba(194,241,145,0.770920868347339) 100%);
+background: -webkit-linear-gradient(90deg, rgba(253,252,251,1) 30%, rgba(194,241,145,0.770920868347339) 100%);
+background: linear-gradient(90deg, rgba(253,252,251,1) 30%, rgba(194,241,145,0.770920868347339) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fdfcfb",endColorstr="#c2f191",GradientType=1);
+background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: auto;
@@ -11,22 +15,24 @@
     justify-content: center;
     text-align: left;
     padding: 20px;
-    margin-top: 50px;
+    padding-top: 80px;  /* Adjust this value based on your navbar's height */
+    margin-top: 60px; 
     position: relative; /* Added for positioning of elements */
 }
 
-/* Text Styling */
+
 .text-secondar {
     color: #FFB524;
     padding-bottom: 5%;
     padding-top: 5%;
     align-items: center;
+    font-family:sans-serif ;
      /* Add padding below for separation */
 }
 
 .text-primar {
     color: #81C408; /* Green color */
-    font-family: fantasy;
+    font-family:sans-serif;
     padding-bottom: 20px; /* Add padding below for separation */
 }
 
@@ -34,13 +40,14 @@
 .carousel-item img {
     max-height: 100%;
     object-fit: cover;
-    padding: 10px; /* Add padding around carousel images */
+    padding: 10px;
 }
 
 /* Padding for Logo and Text */
 .logo-padding {
     padding: 10px; /* Adjust padding as needed */
 }
+
 
 .header-padding {
     padding: 10px; /* Adjust padding for text elements */

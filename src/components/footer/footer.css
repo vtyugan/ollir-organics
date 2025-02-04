@@ -1,67 +1,187 @@
-.footer {
-    background-color: #45595B; /* Adjust as needed */
-    color: #ecf0f1; /* Adjust as needed */
+/* Global Styles */
+html {
+  scroll-padding-top: 80px; /* Adjust this value based on your navbar height */
+  scroll-behavior: smooth; /* Smooth scrolling for anchor links */
 }
 
-.footer .text {
-    color: #81C408; /* Adjust as needed */
+/* Footer Container */
+.container-footer {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #45595B; /* Dark background */
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
 }
 
-.footer .btn {
-    background-color: #81C408; /* Adjust as needed */
-    color: #fff; /* Adjust as needed */
+/* Header Titles */
+.container-item h2 {
+  color: #81C408;
+  font-family: sans-serif;
 }
 
-.footer .btn:hover {
-    background-color: #FFB524; /* Adjust as needed */
+.container-item h6 {
+  color: #f39c12;
+  font-family: sans-serif;
 }
 
-.footer .footer-divider {
-    border-color: #FFB524;
+/* Menu Layout */
+.menu {
+  display: flex;
+  justify-content: space-between; /* Even spacing between sections */
+  flex-wrap: wrap; /* Wrap items for smaller screens */
+  margin-top: 20px;
 }
 
-.footer .btn-link {
-    color:rgba(255, 255, 255, .5);; /* Adjust as needed */
-    text-decoration: none;
+.menu-items {
+  flex: 1; /* Equal width for all sections */
+  min-width: 200px; /* Prevent shrinking too much */
+  margin: 10px; /* Spacing between items */
 }
 
-.footer .btn-link:hover {
-    color: #FFB524; /* Adjust as needed */
-    text-decoration: underline;
+/* Section Titles */
+.menu-items h5 {
+  color: #81C408;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
 }
 
-.footer .footer-icon-link {
-    color: rgba(255, 255, 255, .5); /* Adjust as needed */
-    text-decoration: none;
+/* List Styles */
+.menu-items ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none; /* Remove bullets */
 }
 
-.footer .footer-icon-link:hover {
-    color: #f39c12; /* Adjust as needed */
+.menu-items li {
+  margin-bottom: 8px;
 }
 
-.footer h4 {
-    color: #ecf0f1; /* Adjust as needed */
-}
-.h5 {
-    color: #f39c12; /* Adjust as needed */
-}
-.h1 {
-    color: #81C408; /* Adjust as needed */
+/* Link Styles */
+.menu-items a {
+  text-decoration: none;
+  color: rgb(171, 176, 171);
+  font-size: 0.9rem;
+  transition: color 0.3s;
 }
 
-
-
-.footer p span {
-    font-weight: bold;
-    color: #ffffffa8;
+/* Hover Effect */
+.menu-items a:hover {
+  color: #f39c12;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: #81C408;
 }
 
-.footer p{
-    color: rgba(255, 255, 255, .5);;
+/* Paragraph Styles */
+.menu-items p {
+  color: rgb(171, 176, 171);
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
-/* footer.css */
-footer .container p {
-    font-size: 14px;
-    color: #ccc;  /* Light grey color for the text */
+/* Footer Copyright Section */
+.footer-copyright {
+  background-color: #45595B; /* Match footer background */
+  padding: 10px;
+  text-align: center;
+}
+
+.copyright-text {
+  font-size: 14px;
+  color: #81C408;
+}
+
+/* ============================= */
+/* Responsive Design for 3 Views */
+/* ============================= */
+
+/* 1. Mobile Phones (upto 480px) */
+@media (max-width: 480px) {
+  .container-footer {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .menu {
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center; /* Center align the items */
+  }
+
+  .menu-items {
+    width: 100%; /* Full width for menu items */
+    text-align: center;
+  }
+
+  .menu-items h5 {
+    font-size: 1rem; /* Adjust font size */
+    padding: 8px 0;
+  }
+
+  .menu-items p,
+  .menu-items a {
+    font-size: 0.8rem; /* Smaller font for tight spaces */
+  }
+}
+
+/* 2. Tablets and Small Screens (481px - 768px) */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column; /* Stack vertically */
+    align-items: center;
+  }
+
+  .menu-items {
+    width: 100%; /* Full width for menu items */
+    text-align: center; /* Center align text */
+  }
+
+  .menu-items h5 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+
+  .menu-items p {
+    font-size: 0.9rem;
+  }
+
+  .menu-items a {
+    padding: 5px 0;
+  }
+}
+
+/* 3. Medium Devices (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .menu {
+    justify-content: space-around; /* Spread out evenly */
+    flex-wrap: nowrap; /* Prevent wrapping */
+  }
+
+  .menu-items {
+    text-align: left; /* Align text to the left */
+  }
+
+  .menu-items h5 {
+    font-size: 1.3rem; /* Slightly larger headings */
+  }
+
+  .menu-items a {
+    font-size: 1rem;
+  }
+}
+
+/* 4. Large Screens (min-width: 1025px) */
+@media (min-width: 1025px) {
+  .menu {
+    justify-content: space-between; /* Keep default spacing */
+  }
+
+  .menu-items h5 {
+    font-size: 1.4rem; /* Larger headings for big screens */
+  }
+
+  .menu-items a {
+    font-size: 1rem;
+  }
 }

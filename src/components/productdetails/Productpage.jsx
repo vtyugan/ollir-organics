@@ -1,29 +1,46 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useContext, useEffect, useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { ShopContext } from '../../Context/ShopContext';
 import { products } from '../../data/productdata';
 import './productpage.css';
 
 const ProductPage = () => {
   const { productId } = useParams();
-  
-  // Directly accessing the product by its ID
+  const { addToCart } = useContext(ShopContext);
+  const [cartVisible, setCartVisible] = useState(false);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to top after component renders
+  }, []);
+
   const product = products[productId];
 
   if (!product) {
     return <div>Product not found</div>;
   }
 
-  const renderStars = (rating) => {
-    const stars = [];
-    for (let i = 0; i < 5; i++) {
-      stars.push(i < rating 
-        ? <i key={i} className="fas fa-star" style={{ color: '#ffc107' }}></i> 
-        : <i key={i} className="far fa-star" style={{ color: '#ffc107' }}></i>);
-    }
-    return stars;
+  const {
+    price,
+    priceSize,
+    image,
+    title,
+    category,
+    rating,
+    description1,
+    description2,
+    longDescription,
+  } = product;
+
+  const handleAddToCart = () => {
+    addToCart(productId);
+    alert("Your items are added to the cart."); // Display alert message
+    setCartVisible(true);
   };
 
-  const { price, priceSize, image, title, category, rating, description1, description2, longDescription } = product;
+  const handleGoToCart = () => {
+    navigate('/cart'); // Navigate to cart page
+  };
 
   return (
     <div className="container-fluid">
@@ -31,26 +48,40 @@ const ProductPage = () => {
         <div className="product-image">
           <img src={image} alt={title} />
         </div>
-
         <div className="product-details">
           <h1 className="product-title">{title}</h1>
           <p className="product-category">{category}</p>
           <p className="product-price">
-            ₹{price} 
-            <span className="product-price-size">
-              {priceSize}
-            </span>
+            ₹{price} <span className="product-price-size">{priceSize}</span>
           </p>
-          
-          <div className="product-rating">
-            {renderStars(rating)}
+          <div className="product-buttons">
+            <button
+              className="btn-add-to-cart"
+              onClick={handleAddToCart}
+            >
+              <i className="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+            {cartVisible && (
+              <button
+                className="btn-go-to-cart"
+                onClick={handleGoToCart}
+              >
+                <i className="fas fa-shopping-bag"></i> Go to Cart
+              </button>
+            )}
           </div>
-          <p className="product-description" dangerouslySetInnerHTML={{ __html: description1 }}></p>
-          <p className="product-description" dangerouslySetInnerHTML={{ __html: description2 }}></p>
-          <p className="product-description" dangerouslySetInnerHTML={{ __html: longDescription }}></p>
-          <a href="https://api.whatsapp.com/send?phone=919363620057&text=For%20Orders" target="_blank" rel="noopener noreferrer">
-            <button className="btn-add-to-cart">Buy Now</button>
-          </a>
+          <p
+            className="product-description"
+            dangerouslySetInnerHTML={{ __html: description1 }}
+          ></p>
+          <p
+            className="product-description"
+            dangerouslySetInnerHTML={{ __html: description2 }}
+          ></p>
+          <p
+            className="product-description"
+            dangerouslySetInnerHTML={{ __html: longDescription }}
+          ></p>
         </div>
       </div>
     </div>

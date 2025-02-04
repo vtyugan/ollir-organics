@@ -1,24 +1,45 @@
-import React from 'react';
-import './nattusakkarai.css'
-import Nattusakkarai from '../img/nattu-sakkarai.jpg';
+import React, { useContext } from 'react';
+import './nattusakkarai.css';
+import { ShopContext } from '../../Context/ShopContext';
+import { products } from '../../data/productdata'; // Correct import
 
 function Banner() {
+  const { addToCart } = useContext(ShopContext); // Access the addToCart function from the context
+  const productId = "11"; // ID for Nattu Sakkarai (from products)
+
+  // Handle Add to Cart without alert
+  const handleAddToCart = () => {
+    addToCart(productId); // Add the product to the cart
+  };
+
+  const product = products[productId]; // Get the product details using product ID
+
   return (
-    <div className="container-fluid banner  my-5" id="nattu-sakkarai">
-      <div className="container py-5">
-        <div className="row g-4 align-items-center">
-          <div className="col-lg-6">
-            <div className="py-4">
-              <h1 className="display-3 ">Fresh Nattu Sakkarai</h1>
-              <p className="fw-normal display-3 text-white  mb-4">in Our Store</p>
-              <p className="mb-4 ">We are happy to inform you that we KRRS JAGGERY PRODUCERS are launching our traditional organic #ROYALBLEND jaggery powder is getting ready to make our sweets more sweeter and our celebration's more colourful.. so get ready to grab your orders now.. Dm for orders..</p>
-              <a href="https://api.whatsapp.com/send?phone=919363620057&text=For%20Orders" className="banner-btn btn border-2 border-white rounded-pill text-dark  py-3 px-5">BUY NOW</a>
-            </div>
+    <div className="container-fluid banner my-5" id="nattu-sakkarai">
+      <div className="row g-4 align-items-center">
+        {/* Text and Product Info */}
+        <div className="col-lg-6">
+          <div className="py-4 banner-text">
+            <h1 className="display-3">{product.title}</h1>
+            <p className="fw-normal display-3 mb-4">in Our Store</p>
+            <p className="mb-4">{product.description}</p>
+            <p className="mb-4">
+              <span>Price: ₹{product.price} {product.priceSize}</span>
+            </p>
+            <button className="banner-btn" onClick={handleAddToCart}>
+              ADD TO CART
+            </button>
           </div>
-            <div className="col-lg-6">
-                <div className="position-relative">
-                <img src={Nattusakkarai} className="img-fluid w-100 rounded"  alt="Nattu sakkarai" style={{ width: 322 }}  />
-            </div>
+        </div>
+
+        {/* Product Image */}
+        <div className="col-lg-6">
+          <div className="position-relative banner-img">
+            <img
+              src={product.image}
+              className="img-fluid product-img"
+              alt={product.title}
+            />
           </div>
         </div>
       </div>

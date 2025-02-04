@@ -1,27 +1,29 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import CartItems from "./components/cart/cart.jsx";
+import Header from "./components/Navbar/Navbar";
+import ShopContextProvider from "./Context/ShopContext"; // Ensure ShopContextProvider is imported
+import ProductCard from "./components/productdetails/Productcard.jsx";
+import ProductPage from "./components/productdetails/Productpage.jsx";
+import Footer from "./components/footer/Footer.jsx";
+import ScrollToHash from "./components/scrooltohash/ScrollToHash.jsx"; // Import ScrollToHash component
 
-import Header from './components/header/header.js';
-import Footer from './components/footer/Footer.jsx';
-import ScrollToTop from './components/scroll/Scroll.jsx';
-import Productcard from './components/productdetails/Productcard.jsx'
-import Productpage from './components/productdetails/Productpage.jsx'
 const App = () => {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
-      <div>
-        <ScrollToTop /> {/* Ensures the page scrolls to top on route change */}
+    <ShopContextProvider> {/* Wrap your components with ShopContextProvider */}
+      <Router>
+        <ScrollToHash /> {/* Handles scrolling to top or hash */}
         <Header />
-        
-        <Routes>
-          <Route path="/" element={<Productcard />} />
-          <Route path="/product/:productId" element={<Productpage />} />
-        </Routes>
-
-        
+        <div className="app-content">
+          <Routes>
+            <Route path="/cart" element={<CartItems />} />
+            <Route path="/" element={<ProductCard />} />
+            <Route path="/product/:productId" element={<ProductPage />} />
+          </Routes>
+        </div>
         <Footer />
-      </div>
-    </Router>
+      </Router>
+    </ShopContextProvider>
   );
 };
 
